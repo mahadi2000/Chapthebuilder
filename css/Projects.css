@@ -1,0 +1,605 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  outline: none;
+}
+
+body{
+  background-color: #f6f6f6 !important;
+}
+
+
+
+*::selection {
+  color: white;
+  background: #FAB012;
+}
+
+.mainnav {
+  position: fixed;
+  width: 100%;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem !important;
+  
+  z-index: 10;
+}
+
+.dropbtn {
+  background: white;
+  text-decoration: none;
+  color: black;
+  font-weight: 400;
+  font-family: "Noto Sans", Sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border: none;
+}
+
+.dropbtn:hover{
+  color: #FAB012;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown a{
+padding: 0;
+}
+
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  padding: 10px;
+  font-size: 0.75rem !important;
+  font-weight: 200 !important;
+  line-height: 20px;
+  color: rgb(73, 76, 79) !important;
+  text-align: left;
+  white-space: nowrap;
+  word-spacing: 0px;
+  text-decoration: none;
+  display: block;
+}
+
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #494C4F;
+  color: white !important;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+
+.mainnav .left {
+  display: flex;
+  align-items: baseline;
+}
+
+.mainnav .left .res_menubtn {
+  display: none;
+}
+
+.mainnav .left .res_phone {
+  display: none;
+}
+
+.res_menu {
+  display: none;
+}
+
+.res_menu ul {
+  display: none;
+}
+
+.mainnav .left .logo {
+  margin: 0.75rem;
+  width: 15%;
+}
+
+.mainnav .left .logo img {
+  width: 100%;
+}
+
+.mainnav .left ul {
+  display: flex;
+  align-items: center;
+}
+
+.mainnav .left ul a {
+  text-decoration: none;
+  color: black;
+  font-weight: 400;
+  font-family: "Noto Sans", Sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+}
+
+.mainnav .left ul a:hover{
+  color: #FAB012;
+  }
+
+.mainnav .right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+}
+
+.mainnav .right i {
+  color: black;
+  padding-right: 20px;
+  font-weight: 900;
+  font-size: 18px;
+}
+
+.mainnav .right button {
+  color: white;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 18px;
+  border: none;
+  background: #fab012;
+  padding: 12px 24px;
+  border-radius: 4px;
+}
+
+.mainnav .right button i {
+  padding-right: 4px;
+  font-size: 18px;
+  color: white;
+  font-size: auto;
+}
+
+.res_dropdown {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+
+  .mainnav {
+
+
+    display: block;
+    padding: 0 !important;
+    height: auto;
+  }
+
+  .mainnav .left {
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  .mainnav .left ul {
+    display: none;
+  }
+
+  .mainnav .right {
+    display: none;
+  }
+
+  .mainnav .left .logo {
+    width: 20%;
+    min-width: 160px;
+  }
+
+  .mainnav {
+    display: block;
+  }
+
+  .mainnav .left .res_menubtn {
+    display: block;
+    border: none;
+    font-size: 1.5rem;
+    background-color: white;
+  }
+
+  .mainnav .left .res_phone {
+    display: block;
+    border: none;
+    font-size: 1.25rem;
+    background-color: white;
+  }
+
+  .res_menu {
+    display: none;
+    width: 100%;
+    height: auto;
+    background-color: #000000;
+    color: white;
+    transition: height .4s ease;
+  }
+
+  .res_menu ul {
+    display: block;
+    padding: 0;
+    margin-bottom: 0;
+    list-style-type: none;
+  }
+
+
+  .res_menu ul li {
+
+    border-bottom: 1px solid #FAB012;
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
+    font-family: "Noto Sans", Sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.60rem 1rem;
+  }
+
+  .res_menu ul a {
+    text-decoration: none;
+    color: white;
+  }
+
+  .res_dropdown {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #FAB012;
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
+    font-family: "Noto Sans", Sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.60rem 1rem;
+  }
+
+  .res_dropdownmenu{
+    display: none;
+    list-style-type: none;
+  }
+
+  .res_dropdownmenu a{
+
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding-left: 0.75rem !important;
+  }
+
+  .res_dropdown button {
+    border: none;
+    background-color: black !important;
+    color: white;
+  }
+
+  .res_dropdown .menubtn {
+    padding: 0.25rem 0.75rem !important;
+    color: #FAB012;
+    background-color: white !important;
+    border: 1px solid #FAB012;
+    border-radius: 4px;
+  }
+
+}
+
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 60vh;
+  background: url(/assets/NewsRoom.jpg) rgba(7, 7, 7, 0.4);
+  background-blend-mode: multiply;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero h1 {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  letter-spacing: -0.8px;
+  line-height: 60px;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  word-spacing: 0px;
+  text-shadow: rgba(0, 0, 0, 0.4) 0px 2px 5px;
+}
+
+.text {
+  text-align: center;
+  background-color: #f6f6f6;
+  padding: 2rem 0;
+  margin: 0 auto;
+  max-width: 1140px;
+}
+
+.text h2 {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 45px;
+  font-weight: 800;
+  letter-spacing: -0.2px;
+  line-height: 61.29px;
+  color: rgb(250, 176, 18);
+  text-align: center;
+  word-spacing: 0px;
+}
+
+.text p {
+  font-family: "Noto Sans";
+  font-size: 17px;
+  line-height: 21px;
+  color: rgb(101, 101, 101);
+  text-align: center;
+  word-spacing: 0px;
+}
+
+.allprojects {
+  padding: 2REM 10vw;
+  background-color: #f6f6f6;
+  display: flex;
+  justify-content: space-around;
+}
+
+
+.project {
+  width: 30%;
+  height: 80vh;
+  position: relative;
+}
+
+.project:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 300px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0), black);
+}
+
+.project img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.project p {
+  color: white;
+  z-index: 8;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  font-family: "Noto Sans";
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: center;
+  word-spacing: 0px;
+}
+
+@media (min-width: 1224px) {
+
+
+}
+
+
+
+@media (max-width: 1024px) {
+  .text{
+    padding: 2rem 1rem;
+  }
+
+  .text h2 {
+    font-size: 32px;
+  }
+  
+  .text p {
+    font-size: 12px;
+  }
+
+
+  .allprojects {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 2vw;
+  }
+
+  .project {
+    margin: 1rem 0;
+    width: 100%;
+    height: 60vh;
+    position: relative;
+  }
+
+
+}
+
+@media (max-width: 764px) {
+
+  .hero h1 {
+    font-size: 2rem;
+
+  }
+}
+
+
+
+
+
+
+footer {
+  width: 100%;
+}
+
+footer .ftsection1 {
+  height: 165px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px;
+  background-image: url("/assets/Rectangle-76.png");
+  background-position: center;
+}
+
+footer .ftsection1 h4 {
+  color: #fab012;
+  font-size: 40px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+footer .ftsection1 h4 div {
+  color: white;
+}
+
+footer .ftsection1 button {
+  color: white;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 18px;
+  border: none;
+  background: #fab012;
+  padding: 12px 24px;
+  border-radius: 4px;
+}
+
+footer .ftsection2 {
+  text-decoration: none;
+  background: black;
+  width: 100%;
+  color: white;
+  padding: 70px 30px;
+  margin: 0 0;
+}
+
+footer .ftsection2 .left {
+  padding-right: 7%;
+}
+
+footer .ftsection2 .left h5 {
+  color: #FAB012;
+  font-family: "Noto Sans", Sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+footer .ftsection2 .left p {
+  color: #DEDEDE;
+  font-family: "Noto Sans", Sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 26px;
+}
+
+footer .ftsection2 .mid {
+  padding-right: 2%;
+}
+
+footer .ftsection2 .mid p {
+  color: #FFFFFF;
+  font-family: "Noto Sans", Sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+footer .ftsection2 .mid ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+footer .ftsection2 .mid ul li {
+  padding: 4px 0;
+}
+
+footer .ftsection2 .mid ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+footer .ftsection2 .right p {
+  color: #FFFFFF;
+  font-family: "Noto Sans", Sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+footer .ftsection2 .right ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+footer .ftsection2 .right ul li {
+  padding: 4px 0;
+}
+
+footer .ftsection2 .right ul li a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 0;
+}
+
+footer .ftsection2 .right ul li a i {
+  padding-right: 10px;
+}
+
+footer .ftsection3 {
+  padding: 20px;
+  text-align: center;
+  color: #000000;
+  font-family: "Open Sans", Sans-serif;
+  font-size: 1rem;
+  line-height: 1.5em;
+  font-weight: 500;
+}
+
+
+@media (max-width: 1024px) {
+  footer .ftsection1 {
+    text-align: center;
+    display: block;
+  }
+
+  footer .ftsection1 h4 {
+    font-size: 28px;
+
+  }
+
+  footer .ftsection2 .left h5 {
+    font-size: 1.5rem;
+  }
+
+  footer .ftsection2 .left p {
+
+    font-size: 16px;
+
+  }
+}

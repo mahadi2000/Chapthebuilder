@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            /* Optional: Set background color */
+        }
+
+        .slider-wrapper {
+            margin-top: 20rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .center {
+            width: 90%;
+            /* Adjust the width of the slider as needed */
+        }
+
+        .slick-slide {
+            width: 100%;
+            /* Adjust the height of each slide as needed */
+            position: relative;
+            transform: scale(1.2);
+            transition: all 0.4s ease-in-out;
+        }
+
+        .slick-slide img {
+            width: 100%;
+            object-fit: cover;
+            transition: all 0.4s ease-in-out;
+        }
+
+        .slick-center {
+            transform: scale(1.8);
+            z-index: 99;
+        }
+
+        .slick-list {
+            overflow: visible;
+            /* Allow the slides to overflow from the top and bottom */
+        }
+
+        /* Hide arrow button text */
+        .slick-prev,
+        .slick-next {
+            font-size: 0;
+            line-height: 0;
+            color: transparent;
+        }
+
+        /* Change arrow color to yellow */
+        .slick-prev:before,
+        .slick-next:before {
+            content: "";
+            font-size: 24px;
+            color: yellow;
+            line-height: 1;
+        }
+
+        /* Optional: Add hover effect to arrows */
+        .slick-prev:hover:before,
+        .slick-next:hover:before {
+            color: #ffcc00;
+        }
+    </style>
+
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="slider-wrapper">
+        <div class="center">
+            <div class="img1">
+                <img src="/assets/Retail-Center-on-Beechnut-Street-2-1.jpg" alt="Tranding">
+                <p>Retial & Commercial</p>
+            </div>
+            <div class="img1">
+                <img src="/assets/Luxury-Home-on-Horseshoe-Drive-2-2-1.jpg" alt="Tranding">
+                <p>Residential</p>
+            </div>
+            <div class="img1">
+                <img src="/assets/Now-and-Forever-Eldridge-Exterior-1.jpg" alt="Tranding">
+                <p>Gas & Convenience</p>
+            </div>
+            <div class="img1">
+                <img src="/assets/Retail-Center-on-Beechnut-Street-2-1.jpg" alt="Tranding">
+                <p>Another Category</p>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.center').slick({
+                centerMode: true,
+                autoplay: false,
+                arrows: true,
+                centerPadding: '0px',
+                slidesToShow: 3,
+                infinite: false,
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            arrows: false,
+                            centerMode: true,
+                            centerPadding: '0',
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            arrows: true,
+                            centerMode: false,
+                            centerPadding: '0',
+                            slidesToShow: 1
+                        }
+                    }
+                ]
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -15,6 +15,91 @@
   background: #FAB012;
 }
 
+body{
+  background-image: url('/assets/Group\ 168.png');
+  background-position: center;
+  background-size: contain;
+  
+
+}
+
+
+/* The overlay effect with black background */
+.overlay {
+  height: 100%;
+  width: 100%;
+  display: none;
+  position: fixed;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  background-color: white;
+}
+
+/* The content */
+.overlay-content {
+  position: relative;
+  top: 46%;
+  width: 80%;
+  text-align: center;
+  margin-top: 30px;
+  margin: auto;
+}
+
+/* Close button */
+.overlay .closebtn {
+  position: absolute;
+  top: 0;
+  right: 45px;
+  font-size: 60px;
+  cursor: pointer;
+  color: black;
+}
+
+.overlay .closebtn:hover {
+  color: #333333;
+}
+
+/* Style the search field */
+.overlay input[type=text] {
+  padding: 15px;
+  font-size: 17px;
+  border: none;
+  float: left;
+  width: 80%;
+  background: white;
+}
+
+.overlay input[type=text]:hover {
+  background: #f1f1f1;
+}
+
+/* Style the submit button */
+.overlay button {
+  float: left;
+  width: 20%;
+  padding: 15px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.overlay button:hover {
+  background: #bbb;
+}
+
+.search{
+  display: none;
+  position: absolute;
+  z-index: 99999;
+  top: 0;
+  left: 0;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+}
+
 .mainnav {
   position: fixed;
   width: 100%;
@@ -22,9 +107,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem !important;
+  padding: 0 !important;
   padding-bottom: 0 !important;
-
   z-index: 10;
 }
 
@@ -114,7 +198,8 @@
 }
 
 .mainnav .left .logo {
-  margin: 0.75rem;
+  /* margin: 0.75rem; */
+  padding: 10px;
   width: 10vw;
 }
 
@@ -144,8 +229,9 @@
 .mainnav .right {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: end;
   width: 30%;
+  padding-right: 3rem;
 }
 
 .mainnav .right i {
@@ -156,6 +242,11 @@
 }
 
 .mainnav .right button {
+  background-color: white;
+  border: none;
+}
+
+.mainnav .right .phoneno {
   color: white;
   font-family: "Noto Sans", sans-serif;
   font-size: 1rem;
@@ -167,7 +258,7 @@
   border-radius: 4px;
 }
 
-.mainnav .right button i {
+.mainnav .right .phoneno i {
   padding-right: 4px;
   font-size: 18px;
   color: white;
@@ -184,6 +275,7 @@
 @media (min-width: 1440px) {
   .mainnav .left .logo {
     width: 11vw;
+    max-width: 150px;
   }
 }
 
@@ -329,9 +421,14 @@
 
 
 
+.carousel-inner .carousel-item{
+  background-color: #000000;
+}
 
 .carousel-inner .carousel-item img {
-  height: 640px;
+  opacity: 0.5;
+  height: 45vw;
+  min-height: 640px;
   -o-object-fit: cover;
   object-fit: cover;
 }
@@ -343,7 +440,7 @@
   top: unset !important;
   left: 50% !important;
   bottom: 12px !important;
-  transform: translateX(-3.5vw) !important;
+  transform: translateX(-2.5vw) !important;
   border: 2px solid white !important;
   padding: 1px !important;
   border-radius: 40px;
@@ -361,7 +458,7 @@ background-size: 20px !important;
   top: unset !important;
   right: 50% !important;
   bottom: 12px !important;
-  transform: translateX(3.5vw) !important;
+  transform: translateX(2.5vw) !important;
   border: 2px solid white !important;
   padding: 1px !important;
   border-radius: 40px;
@@ -369,8 +466,14 @@ background-size: 20px !important;
 }
 
 .carousel-caption {
-  align-items: center;
   text-align: center;
+
+  top: 70%;
+  transform: translateY(-70%);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
 .carousel-caption h1 {
@@ -412,12 +515,22 @@ background-size: 20px !important;
   line-height: 18px;
   border: none;
   background: #fab012;
-  padding: 12px 24px;
-  border-radius: 4px;
+  padding: 15px 35px;
+  border-radius: 3px;
 }
 
 
 @media (max-width:1449px) {
+  .carousel-caption {
+    text-align: center;
+  
+    top: 60%;
+    transform: translateY(-60%);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
   
 .carousel-control-prev {
   transform: translateX(-130%) !important;
@@ -457,7 +570,7 @@ background-size: 20px !important;
 @media (max-width: 764px) {
 
   .carousel-caption {
-    text-align: start;
+
   }
 
 
@@ -477,8 +590,7 @@ background-size: 20px !important;
 }
 
 .tr {
-  width: 70%;
-  margin: 0.25rem auto;
+  margin: 0 auto;
   position: relative;
 }
 
@@ -488,10 +600,13 @@ background-size: 20px !important;
 
 .tr .content {
   text-align: center;
-  top: 0;
-  left: 25%;
+  top: 10%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* left: 25%; */
   width: 50%;
-  margin: 0 auto;
+  margin: auto;
   padding: 2rem 0;
   position: absolute;
   z-index: 5;
@@ -556,13 +671,16 @@ background-size: 20px !important;
   }
 }
 
+@media (max-width: 1266px) {
+  .tr .content {
+    top: 0%;
+  }
+}
 
 @media (max-width:1024px) {
 
 
   .tr .content {
-
-    left: 5%;
 
     width: 90%;
   }
@@ -700,6 +818,7 @@ word-spacing: 0px;
 .Newsroom {
   margin: 3rem 10%;
   display: flex;
+  justify-content: center;
   align-items: center;
   gap: 1rem;
 }
@@ -712,9 +831,9 @@ word-spacing: 0px;
 
 .Newsroom_head h4 {
   font-family: "Noto Sans";
-  font-size: 2.75rem;
+  margin-top: -20px;
+  font-size: 2.5rem;
   font-weight: 700;
-  line-height: 25px;
   color: #FAB012;
   text-align: center;
   word-spacing: 0px;
@@ -757,14 +876,14 @@ background-color: #FAB012; */
 }
 
 .imgbox {
-
-
   text-align: center;
   height: 100%;
+  max-width: 300px;
   border: 0.5px solid gray;
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
 
 .imgbox .content {
   padding: 20px 20px 20px 20px
@@ -777,7 +896,7 @@ background-color: #FAB012; */
 .imgbox img {
   object-fit: cover;
   width: 100%;
-  height: 200px;
+  height: 220px;
 }
 
 .imgbox .titlebox {
@@ -801,9 +920,10 @@ background-color: #FAB012; */
 
 }
 
+
 @media (max-width: 1024px) {
   .Newsroom {
-    margin: 0;
+    margin: 3rem auto;
     display: block;
     text-align: center;
   }
@@ -815,21 +935,58 @@ background-color: #FAB012; */
   }
 
   .imgbox_container {
-    margin: 0 auto;
-    display: block;
-    width: 90%;
-    gap: 0.5rem;
+    justify-content: space-evenly;
+    margin: 0 0.75rem;
   }
 
+  .mob_clear{
+    display: none;
+  }
+  
   .imgbox {
+  
+    height: 100%;
+    max-width: 300px;
+  }
+  
+  .imgbox .content {
+    padding: 10px;
+  }
+  
+  .meta {
+    font-size: 0.60rem;
+  }
+  
+  .imgbox img {
+    object-fit: cover;
     width: 100%;
-    margin-bottom: 0.5rem;
+    height: 180px;
+  }
+  
+  .imgbox .titlebox {
+    height: 40px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .imgbox .title {
+  
+    font-family: "Noto Sans", sans-serif;
+    font-size: 0.85rem;
+    line-height: 19px;
+    font-weight: 700;
+    letter-spacing: -0.2px;
+    text-decoration: none;
+    color: #FAB012;
+    text-align: center;
+    word-spacing: 0px;
+    width: 80%;
   }
 }
 
 .video {
   width: 100%;
-  height: 60vh;
+  height: 40vw;
   margin-bottom: -10px;
 }
 
@@ -838,7 +995,11 @@ background-color: #FAB012; */
 }
 
 
-
+@media (max-width:768px) {
+  .video {
+    height: 100%;
+  }
+}
 
 
 
@@ -860,14 +1021,25 @@ footer .section1 {
   background-position: center;
 }
 
+footer .section1 .contact {
+  margin: 0;
+display: flex;
+align-items: center;
+}
+
 footer .section1 h4 {
+  font-family: "Noto Sans", sans-serif;
   color: #fab012;
-  font-size: 40px;
+  font-size: 35px;
   font-weight: 500;
   text-transform: capitalize;
 }
 
 footer .section1 h4 div {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 35px;
+  font-weight: 700;
+  margin-left: 10px;
   color: white;
 }
 
@@ -879,8 +1051,8 @@ footer .section1 button {
   line-height: 18px;
   border: none;
   background: #fab012;
-  padding: 12px 24px;
-  border-radius: 4px;
+  padding: 15px 35px;
+  border-radius: 3px;
 }
 
 footer .section2 {
@@ -974,15 +1146,28 @@ footer .section3 {
 }
 
 
+footer .section3 p{
+  margin-bottom: 0;
+}
+
+
 @media (max-width: 1024px) {
-  footer .section1 {
+  footer .section1 .contact {
     text-align: center;
     display: block;
   }
+  footer .section1 {
+    text-align: center;
+    flex-direction: column;
+  }
 
   footer .section1 h4 {
-    font-size: 28px;
-
+    font-size: 25px;
+  }
+  
+  footer .section1 h4 div {
+    font-size: 25px;
+    margin-bottom: 10px;
   }
 
   footer .section2 .left h5 {

@@ -28,6 +28,23 @@
 </head>
 
 <body>
+    <!-- <div class="searchbox">
+        <input type="text" placeholder="Search" id="">
+        <button>Close</button>
+    </div> -->
+
+    <div id="myOverlay" class="overlay">
+        <span class="closebtn" onclick="closeSearch()" title="Close Overlay">x</span>
+        <div class="overlay-content">
+          <form action="action_page.php">
+            <input type="text" placeholder="Search.." name="search">
+            <button type="submit"><i class="fa fa-search"></i></button>
+          </form>
+        </div>
+      </div>
+
+      
+
     <header>
         <!-- Navbar -->
         <nav class="mainnav">
@@ -59,8 +76,8 @@
                 </ul>
             </div>
             <div class="right">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <button><i class="fa-solid fa-phone"></i> (832) 863-1819</button>
+                <Button onclick=openSearch()><i class="fa-solid fa-magnifying-glass"></i></Button> 
+                <button class="phoneno"><i class="fa-solid fa-phone"></i> (832) 863-1819</button>
             </div>
 
             <div id="res_menu" class="res_menu">
@@ -178,33 +195,33 @@
     </div>
 
 
-<!-- Slider -->
-<div class="marketslider">
-    <p class="slider-subheading">Sectors</p>
-    <h2 class="slider-heading">Market Sectors</h2>
-    <div class="slider-wrapper">
-        <div class="center">
-            <div class="img1">
-                <img src="/assets/Retail-Center-on-Beechnut-Street-2-1.jpg" alt="Tranding">
-                <p>Retial & Commercial</p>
-            </div>
-            <div class="img1">
-                <img src="/assets/Luxury-Home-on-Horseshoe-Drive-2-2-1.jpg" alt="Tranding">
-                <p>Residential</p>
-            </div>
-            <div class="img1">
-                <img src="/assets/Now-and-Forever-Eldridge-Exterior-1.jpg" alt="Tranding">
-                <p>Gas & Convenience</p>
-            </div>
-            <div class="img1">
-                <img src="/assets/Retail-Center-on-Beechnut-Street-2-1.jpg" alt="Tranding">
-                <p>Another Category</p>
+    <!-- Slider -->
+    <div class="marketslider">
+        <p class="slider-subheading">Sectors</p>
+        <h2 class="slider-heading">Market Sectors</h2>
+        <div class="slider-wrapper">
+            <div class="center">
+                <div class="img1">
+                    <img src="/assets/Retail-Center-on-Beechnut-Street-2-1.jpg" alt="Tranding">
+                    <p>Retial & Commercial</p>
+                </div>
+                <div class="img1">
+                    <img src="/assets/Luxury-Home-on-Horseshoe-Drive-2-2-1.jpg" alt="Tranding">
+                    <p>Residential</p>
+                </div>
+                <div class="img1">
+                    <img src="/assets/Now-and-Forever-Eldridge-Exterior-1.jpg" alt="Tranding">
+                    <p>Gas & Convenience</p>
+                </div>
+                <div class="img1">
+                    <img src="/assets/Retail-Center-on-Beechnut-Street-2-1.jpg" alt="Tranding">
+                    <p>Another Category</p>
+                </div>
             </div>
         </div>
     </div>
-</div>
-<!-- Slider -->
-   
+    <!-- Slider -->
+
 
 
 
@@ -219,7 +236,7 @@
         </div>
         <div class="imgbox_container">
             <div class="imgbox">
-                <img src="/assets/news1.jpg">
+                <img src="/assets/Rectangle 45.png">
                 <div class="content">
                     <p class="meta">March 28, 2023</p>
                     <div class="titlebox">
@@ -231,7 +248,7 @@
             </div>
 
             <div class="imgbox">
-                <img src="/assets/news2.jpg">
+                <img src="/assets/Rectangle 46.png">
                 <div class="content">
                     <p class="meta">March 28, 2023</p>
                     <div class="titlebox">
@@ -242,8 +259,8 @@
                 </div>
             </div>
 
-            <div class="imgbox">
-                <img src="/assets/news3.jpg">
+            <div class="imgbox mob_clear">
+                <img src="/assets/Rectangle 47.png">
                 <div class="content">
                     <p class="meta">March 28, 2023</p>
                     <div class="titlebox">
@@ -305,7 +322,7 @@
     <footer>
 
         <div class="section1">
-            <h4 class="contact">CONTACT US NOW:<div> (832) 863-1819</div>
+            <h4 class="contact">CONTACT US NOW: <div> (832) 863-1819</div>
             </h4>
             <button class="">Get A Quote</button>
         </div>
@@ -330,13 +347,21 @@
                 </ul>
             </div>
 
-            <div class="right col-12 col-md-6">
+            <div class="right col-12 col-md-3">
                 <p>Contact</p>
                 <ul>
                     <li><a href=""><i class="fa-solid fa-phone fa-sm"></i>(832) 863-1819</a></li>
                     <li><a href=""><i class="fa-regular fa-clock fa-sm"></i>Mon - Fri 09:00am - 06:00pm</a></li>
                     <li><a href=""><i class="fa-solid fa-location-dot"></i>9217 Summerbell Lane, Houston, Texas,
                             77407</a></li>
+                </ul>
+            </div>
+
+            <div class="right col-12 col-md-3">
+                <p>Information</p>
+                <ul>
+                    <li><a href="">Privacy Policy</a></li>
+                    <li><a href="">Terms Of Service</a></li>
                 </ul>
             </div>
 

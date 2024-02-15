@@ -815,6 +815,18 @@ word-spacing: 0px;
   .slick-slide {
     padding: 30px;
   }
+
+
+  .slick-prev{
+    z-index: 1;
+  left: 0px;
+  }
+ 
+.slick-next {
+  z-index: 1;
+  right: 0px !important;
+  
+}
 }
 
 

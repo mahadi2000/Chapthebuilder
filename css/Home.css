@@ -750,7 +750,7 @@ word-spacing: 0px;
 }
 
 .slick-slide {
-  padding: 50px;
+  padding: 4vw;
   width: 100%;
   position: relative;
   transform: scale(1.2);
@@ -786,17 +786,20 @@ word-spacing: 0px;
 .slick-next {
   font-size: 20px;
   line-height: 0;
-  color: yellow;
+  background-color: #000000;
+  
 }
 
 
 .slick-prev:before,
 .slick-next:before {
   content: "";
-  font-size: 24px;
-  color: rgb(255, 0, 0);
+  font-size: 34px !important;
+  color: #00000077 !important;
+  border-radius: 40px;
   line-height: 1;
 }
+
 
 .slick-prev:hover:before,
 .slick-next:hover:before {

@@ -440,7 +440,7 @@ body{
   top: unset !important;
   left: 50% !important;
   bottom: 12px !important;
-  transform: translateX(-2.5vw) !important;
+  transform: translateX(-120%) !important;
   border: 2px solid white !important;
   padding: 1px !important;
   border-radius: 40px;
@@ -458,7 +458,7 @@ background-size: 20px !important;
   top: unset !important;
   right: 50% !important;
   bottom: 12px !important;
-  transform: translateX(2.5vw) !important;
+  transform: translateX(120%) !important;
   border: 2px solid white !important;
   padding: 1px !important;
   border-radius: 40px;
@@ -494,7 +494,6 @@ background-size: 20px !important;
 }
 
 .carousel-caption p {
-  background-color: rgba(0, 0, 0, 0.2941176471);
   width: 70%;
   margin: 0 auto;
 }
@@ -533,11 +532,11 @@ background-size: 20px !important;
   }
   
 .carousel-control-prev {
-  transform: translateX(-130%) !important;
+  /* transform: translateX(-60px) !important; */
 }
 
 .carousel-control-next {
-  transform: translateX(130%) !important;
+  /* transform: translateX(60px) !important; */
 }
 
   .carousel-caption h1 {
@@ -1076,6 +1075,8 @@ footer .section2 {
   width: 100%;
   color: white;
   padding: 70px 30px;
+  display: flex;
+  justify-content: center;
   margin: 0 0;
 }
 
